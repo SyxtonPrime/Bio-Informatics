@@ -27,3 +27,10 @@ def DSA_hash(word, value):
 	return small_hash
 # DSA_hash returns an integer value in (0, 16**7 = 2**28)
 
+# Using Sympy the smallest prime bigger than 2**30 is 1073741827
+def py_hash(word, value):
+	word_hash = hash(word)
+	return (((value + 7)*word_hash + 1000*value)%1073741827)%(2**29)
+
+
+
