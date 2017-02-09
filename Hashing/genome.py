@@ -28,13 +28,13 @@ def markov_genome(x):
 		if letter == 'A':
 			letter = np.random.choice(array, p=[0.4, 0.3, 0.2, 0.1])
 			f.write(letter)
-		if letter == 'T':
+		elif letter == 'T':
 			letter = np.random.choice(array, p=[0.1, 0.4, 0.3, 0.2])
 			f.write(letter)
-		if letter == 'C':
+		elif letter == 'C':
 			letter = np.random.choice(array, p=[0.2, 0.1, 0.4, 0.3])
 			f.write(letter)
-		if letter == 'G':
+		elif letter == 'G':
 			letter = np.random.choice(array, p=[0.3, 0.2, 0.1, 0.4])
 			f.write(letter)
 

@@ -1,4 +1,5 @@
 import hashlib
+import random
 
 # word = ACCGTACGTACGATTAGCAT
 # hash_object = hashlib.md5()
@@ -30,7 +31,8 @@ def DSA_hash(word, value):
 # Using Sympy the smallest prime bigger than 2**41 is 2199023255579
 def py_hash(word, value):
 	word_hash = hash(word)
-	return (((value + 7)*word_hash + 1000*value)%2199023255579)%(2**29)
+	return ((((coeff[value][0]*word_hash + coeff[value][1])*word_hash + coeff[value][2])*word_hash + coeff[value][3]) % 2199023255579) % (2**29)
 
+coeff = [[random.randint(1, 2199023255578) for _ in range(4)] for _ in range(4)]
 
 

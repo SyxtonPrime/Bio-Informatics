@@ -61,7 +61,7 @@ for k in range(0, w):
 				my_hash_bin[1][my_hashing.my_second_hash(k_mer, 1)], l[1],
 				my_hash_bin[3][my_hashing.my_second_hash(k_mer, 3)])
 			if frequency != 0:
-				second_estimate = min(py_hash_bin[i][python_hashing.DSA_hash(kmer, i)] for i in range(4))
+				second_estimate = min(py_hash_bin[i][python_hashing.DSA_hash(k_mer, i)] for i in range(4))
 				# k_mer_frequency.append((k_mer, frequency))
 				g.write('k_mer: ' + k_mer + ', ' )
 				g.write('Frequency: ' + str(frequency) + ', ')
